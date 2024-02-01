@@ -14,4 +14,4 @@ Starting program: D:\PSC\c-activity-sets-1\set01/.\problem01.exe
 [New Thread 31540.0x9804]
 Monisha B
 [Inferior 1 (process 31540) exited normally]
-(gdb) quit
+(gdb) quitr
