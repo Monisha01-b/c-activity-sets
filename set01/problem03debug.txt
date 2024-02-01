@@ -1,0 +1,30 @@
+gdb problem03.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from D:\PSC\c-activity-sets-1\set01\problem03.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x4014df: file problem03.c, line 23.
+(gdb) r
+Starting program: D:\PSC\c-activity-sets-1\set01/problem03.exe 
+[New Thread 32392.0x134c]
+[New Thread 32392.0x591c]
+
+Breakpoint 1, main () at problem03.c:23
+23          a=input();
+(gdb) n
+Enter a number
+3
+24          b=input();
+(gdb) c
+Continuing.
+Enter a number
+3
+The sum of 3 and 3 is 6[Inferior 1 (process 32392) exited normally]
+(gdb) q
