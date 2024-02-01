@@ -7,6 +7,6 @@ int main()
     int b=4;
     int sum =0;
     sum=a+b;
-    printf("The sum is %d",&sum);
+    printf("The sum is %d",sum);
     return 0;
 }
