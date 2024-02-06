@@ -26,7 +26,7 @@ Complex add_complex(Complex a, Complex b)
 }
 void output(Complex a,Complex b,Complex sum)
 {
-    printf("the sum of %2.f+%2.fi and %2.f+%2.fi is %2.f ",a.real,a.imaginary,b.real,b.imaginary);
+    printf("the sum of %2.f+%2.fi and %2.f+%2.fi is %2.f +%2.fi ",a.real,a.imaginary,b.real,b.imaginary,sum.real, sum.imaginary);
 }
 int main()
 {
