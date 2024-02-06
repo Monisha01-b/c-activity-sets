@@ -3,9 +3,11 @@
 #include <stdio.h>
 void input(int *a, int *b)
 {
-    int n;
-    printf("Enter a number\n");
-    scanf("%d",&n);
+    int a,b;
+    printf("Enter the first number\n");
+    scanf("%d",*a);
+    printf("Enter the second number\n");
+    scanf("%d",*b);
 }
 void add(int a, int b, int *sum)
 {
