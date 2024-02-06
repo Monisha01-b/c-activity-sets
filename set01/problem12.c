@@ -1,66 +1,59 @@
 //Write a C program to find the sum of _n_ complex numbers
 
 #include<stdio.h>
-struct _complex {
-	float real,img;
+struct complex
+{
+    float real;
+    float imag;
 };
-typedef struct _complex Complex;
 
-int get_n();
-Complex input_complex();
-void input_n_complex(int n, Complex c[n]);
-Complex add(Complex a, Complex b);
-Complex add_n_complex(int n, Complex c[n]);
-void output(int n, Complex c[n], Complex result);
-int main()
+typedef struct complex com;
+
+int input()
 {
-	int n=get_n();
-	Complex c[n];
-	input_n_complex(n,c);
-	Complex result=add_n_complex(n,c);
-	output(n,c,result);
-	return 0;
+    int n;
+    printf("how many complex numbers you want to add: ");
+    scanf("%d",&n);
+    return n;
 }
-int get_n()
-{
-	int x;
-	printf("enter n value: ");
-	scanf("%d",&x);
-	return x;
+
+com input_complex(){
+    com x;
+    printf("enter the real number: ");
+    scanf("%f",&x.real);
+    printf("enter the imaginary number: ");
+    scanf("%f",&x.imag);
+    return x;
 }
-Complex input_complex()
-{
-	Complex n;
-	printf("enter the num: ");
-	scanf("%f",&n.real);
-	printf("enter the num: ");
-	scanf("%f",&n.img);
-	return n;
+
+void n_complex(int n,com arr[]){
+    int i;
+    for(i=0;i<n;i++){
+       arr[i]=input_complex();
+    }
 }
-void input_n_complex(int n, Complex c[n])
-{
-	for(int i=0;i<n;i++)
-	{
-		c[i]=input_complex();
-	}
+
+com add(int n,com arr[]){
+    int i;
+    com sum={0,0};
+    for(i=0;i<n;i++){
+        sum.real=sum.real+arr[i].real;
+        sum.imag=sum.imag+arr[i].imag;
+    }
+    return sum;
 }
-Complex add(Complex a, Complex b)
-{
-	Complex result;
-	result.real=a.real+b.real;
-	result.img=a.img+b.img;
-	return result;
+
+void output(com sum){
+    printf("the sum is %f+%fi",sum.real,sum.imag);
 }
-Complex add_n_complex(int n, Complex c[n])
-{
-	Complex result={0,0};
-	for(int i=0;i<n;i++)
-	{
-		result=add(result,c[i]);
-	}
-	return result;
-}
-void output(int n, Complex c[n], Complex result)
-{
-	printf("the result will be %f + %fi",result.real,result.img);
+
+int main(){
+    int n;
+    n=input();
+    com arr[n];
+    n_complex(n,arr);
+    com s;
+    s=add(n,arr);
+    output(s);
+return 0;
 }
