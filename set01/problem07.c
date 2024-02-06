@@ -19,7 +19,7 @@ int sum_n_nos(int n)
 }
 void output(int n, int sum)
 {
-    printf("the sum of %d is %d ",n,sum);
+    printf("the sum of numbers till %d is %d ",n,sum);
 }
 int main()
 {

@@ -35,8 +35,8 @@ int main()
     int n;
     n=input_array_size();
     int a[n];
-    input_array(n, a[n]);
-    int sum=sum_n_array(n, a[n]);
-    output(n, a[n],sum);
+    input_array(n, a);
+    int sum=sum_n_array(n, a);
+    output(n, a,sum);
     return 0;
 }
