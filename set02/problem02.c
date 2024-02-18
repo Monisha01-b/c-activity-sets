@@ -1,4 +1,4 @@
-//Write a program to find if a triangle is scalene.
+//Write a program to find if a triangle is sc
 
 #include <stdio.h>
 
